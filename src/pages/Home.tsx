@@ -24,8 +24,8 @@ const Home = () => {
           <PokeApiLogo />
         </div>
         <InfoPokeApi />
-        <InfoReact />
         <InfoHelp />
+        <InfoReact />
         <InfoTeem />
       </section>
       <Background />
