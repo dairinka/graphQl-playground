@@ -125,7 +125,7 @@ const Header: FC = (): JSX.Element => {
                 />
                 <span className="peer absolute left-0.5 top-0.5 h-4/5 w-2/5 rounded-full bg-green transition-all duration-200 peer-checked:left-5" />
               </label>
-              <span className="ml-3 font-semibold">Ru</span>
+              <span className="ml-3 font-semibold">Ua</span>
             </div>
           </li>
         </ul>
