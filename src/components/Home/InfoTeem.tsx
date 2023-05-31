@@ -10,27 +10,36 @@ const InfoTeem = () => {
         <div className="grid grid-rows-1 items-start md:grid-cols-3">
           <div className="mb-2 flex flex-col items-center justify-center md:mb-4">
             <div className="h-[155px] w-[165px] rounded-[10px] bg-[url('./Artsem.jpeg')] bg-cover bg-center bg-no-repeat "></div>
-            <h2 className="mt-1 font-semibold md:mt-2">
+            <h3 className="mt-1 font-semibold md:mt-2">
+              <FormattedMessage id="ARTEM_ROLE" />
+            </h3>
+            <h4 className="mt-1 font-semibold md:mt-2">
               <FormattedMessage id="ARTEM_NAME" />
-            </h2>
+            </h4>
             <p className="mt-1 md:mt-2">
               <FormattedMessage id="ARTEM_INFO" />
             </p>
           </div>
           <div className="mb-2 flex flex-col items-center md:mb-4 md:ml-4">
             <div className="h-[155px] w-[165px] rounded-[10px] bg-[url('./Iryna.jpg')] bg-cover bg-center bg-no-repeat "></div>
-            <h2 className="mt-1 font-semibold md:mt-2">
-              <FormattedMessage id="IRINA_NAME" />
-            </h2>
+            <h3 className="mt-1 font-semibold md:mt-2">
+              <FormattedMessage id="IRYNA_ROLE" />
+            </h3>
+            <h4 className="mt-1 font-semibold md:mt-2">
+              <FormattedMessage id="IRYNA_NAME" />
+            </h4>
             <p className="mt-1 md:mt-2">
-              <FormattedMessage id="IRINA_INFO" />
+              <FormattedMessage id="IRYNA_INFO" />
             </p>
           </div>
           <div className="flex flex-col items-center justify-center md:mb-4 md:ml-4">
             <div className="h-[155px] w-[165px] rounded-[10px] bg-[url('./Masha.jpg')] bg-cover bg-center bg-no-repeat "></div>
-            <h2 className="mt-1 font-semibold md:mt-2">
+            <h3 className="mt-1 font-semibold md:mt-2">
+              <FormattedMessage id="MASHA_ROLE" />
+            </h3>
+            <h4 className="mt-1 font-semibold md:mt-2">
               <FormattedMessage id="MASHA_NAME" />
-            </h2>
+            </h4>
             <p className="mt-1 md:mt-2">
               <FormattedMessage id="MASHA_INFO" />
             </p>
