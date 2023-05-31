@@ -108,8 +108,8 @@ export const AppProvider: FC<Props> = ({ children }) => {
       setCurrentLocale(LOCALES.ENGLISH);
       localStorage.setItem('lang', LOCALES.ENGLISH);
     } else {
-      setCurrentLocale(LOCALES.UKRAINIAN);
-      localStorage.setItem('lang', LOCALES.UKRAINIAN);
+      setCurrentLocale(LOCALES.RUSSIAN);
+      localStorage.setItem('lang', LOCALES.RUSSIAN);
     }
   };
 

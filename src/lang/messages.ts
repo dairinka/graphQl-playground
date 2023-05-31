@@ -70,7 +70,7 @@ export const messages = {
     ERROR3: 'REFRESH',
     ERROR4: 'GO BACK',
   },
-  [LOCALES.UKRAINIAN]: {
+  [LOCALES.RUSSIAN]: {
     MAIN: 'Головна',
     SIGN_IN: 'Вхід',
     SIGN_UP: 'Регістрація',
