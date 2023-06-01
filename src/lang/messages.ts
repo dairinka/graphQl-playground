@@ -29,7 +29,7 @@ export const messages = {
     ARTEM_NAME: 'Artsem Rubashka',
     ARTEM_INFO:
       'Wrap error boundary, connect authentication with Firebase, add headers in request, wrap suspense and lazy loader',
-    IRYNA_ROLE: 'Developer and designer',
+    IRYNA_ROLE: 'Developer',
     IRYNA_NAME: 'Iryna Yehorova',
     IRYNA_INFO:
       'Connect GraphQL API, loading and visualization of the schema, connect and configure the editor, adaptive main page layout, smooth animation, creating a layout',
@@ -98,7 +98,7 @@ export const messages = {
     ARTEM_NAME: 'Артем Рубашка',
     ARTEM_INFO:
       'Обернення в Error Boundary, підключення Firebase авторизації, додавання заголовків в запит до серверу, обернення компонентів в Suspense та додавання лінивого завантаження',
-    IRYNA_ROLE: 'Розробниця та дизайнерка',
+    IRYNA_ROLE: 'Розробниця',
     IRYNA_NAME: 'Ірина Єгорова',
     IRYNA_INFO:
       'Налаштування запитів до GraphQL сервера, завантаження та візуалізація GraphQL схеми, підключення та конфігурація редактора коду, адаптивна верстка головної сторінки та всіх її компонентів, додавання плавної анімації для блоків, створення макету додатка',
@@ -114,7 +114,7 @@ export const messages = {
     INTRO_API3: 'Ви можете дізнатися їх імена, типи, здібності та статистику.',
     INTRO_API4: "З'явилися питання? Всі відповіді можно знайти в документації додатку",
     INTRO_API5: 'Почніть тестувати GraphQL API зараз!',
-    INTRO_REACT1: 'Фінальний проект курса React 2023Q1',
+    INTRO_REACT1: 'фінальний проект курса React 2023Q1',
     INTRO_REACT1_2: 'в RS School',
     INTRO_REACT2: 'Курс React',
     INTRO_REACT3: 'про:',

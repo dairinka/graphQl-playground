@@ -9,7 +9,7 @@ const InfoTeem = () => {
       <div className="grid grid-rows-1 items-start md:grid-cols-3">
         <section className="mb-2 flex flex-col items-center justify-center md:mb-4">
           <div className="h-[155px] w-[165px] rounded-[10px] bg-[url('./Artsem.jpeg')] bg-cover bg-center bg-no-repeat "></div>
-          <h3 className="mt-1 text-center font-semibold md:mt-2 md:h-[48px] lg:h-auto">
+          <h3 className="mt-1 text-center font-semibold md:mt-2">
             <FormattedMessage id="ARTEM_ROLE" />
           </h3>
           <h4 className="mt-1 text-center font-semibold md:mt-2">
@@ -33,7 +33,7 @@ const InfoTeem = () => {
         </section>
         <section className="flex flex-col items-center justify-center md:mb-4 md:ml-4">
           <div className="h-[155px] w-[165px] rounded-[10px] bg-[url('./Masha.jpg')] bg-cover bg-center bg-no-repeat "></div>
-          <h3 className="mt-1 text-center font-semibold md:mt-2 md:h-[48px] lg:h-auto">
+          <h3 className="mt-1 text-center font-semibold md:mt-2">
             <FormattedMessage id="MASHA_ROLE" />
           </h3>
           <h4 className="mt-1 text-center font-semibold md:mt-2">
