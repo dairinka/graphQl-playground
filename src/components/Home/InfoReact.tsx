@@ -12,12 +12,9 @@ const InfoReact = () => {
     <div className="mt-12 w-full rounded-[10px] bg-query p-6 text-dark-blue">
       <div className="mx-auto flex w-5/6 flex-col items-center gap-6">
         <div className="sm:-mx-22 -mx-8 flex flex-row flex-wrap items-center justify-center gap-2 text-[20px]">
-          <p className="font-semibold-400 font-Impact text-[32px]">GraphiQL</p>
-          <p className="text-center">
-            <FormattedMessage id="INTRO_REACT1" />
-          </p>
-          <p className="text-center">
-            <FormattedMessage id="INTRO_REACT1_2" />
+          <p>
+            <span className=" font-Impact text-[32px]">GraphiQL</span> -&nbsp;
+            <FormattedMessage id="INTRO_REACT1" /> <FormattedMessage id="INTRO_REACT1_2" />
           </p>
         </div>
         <h3 className="flex flex-row flex-wrap gap-2 self-start text-[20px]">
