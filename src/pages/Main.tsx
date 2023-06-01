@@ -2,6 +2,8 @@ import { FC, useEffect, Suspense, lazy, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
+import { FormattedMessage } from 'react-intl';
+
 import { auth } from '../firebase';
 import { SchemaData, Type } from '../types/types';
 import { defaultSchemaObj } from '../providers/AppProviders';
@@ -62,7 +64,13 @@ const Main: FC = (): JSX.Element => {
   return (
     <>
       <div className="mt-[80px] h-[40px] w-screen bg-green py-2 text-white">
-        {user?.displayName ? <p className="text-center">Hello, {user?.displayName}!</p> : false}
+        {user?.displayName ? (
+          <p className="text-center">
+            <FormattedMessage id="HELLO" />, {user?.displayName}!
+          </p>
+        ) : (
+          false
+        )}
       </div>
       <main className="relative z-0 min-h-[calc(100vh-120px)] w-screen overflow-hidden bg-dark-blue sm:h-[calc(100vh-120px)]">
         <article className="relative flex flex-col sm:flex-row">
