@@ -63,7 +63,7 @@ const Main: FC = (): JSX.Element => {
 
   return (
     <>
-      <div className="mt-[80px] h-[40px] w-screen bg-green py-2 text-white">
+      <div className="mt-[80px] h-[40px] w-full bg-green py-2 text-white">
         {user?.displayName ? (
           <p className="text-center">
             <FormattedMessage id="HELLO" />, {user?.displayName}!
@@ -72,7 +72,7 @@ const Main: FC = (): JSX.Element => {
           false
         )}
       </div>
-      <main className="relative z-0 min-h-[calc(100vh-120px)] w-screen overflow-hidden bg-dark-blue sm:h-[calc(100vh-120px)]">
+      <main className="relative z-0 min-h-[calc(100vh-120px)] w-full overflow-hidden bg-dark-blue sm:h-[calc(100vh-120px)]">
         <article className="relative flex flex-col sm:flex-row">
           <div className="relative grid h-[calc(100vh-120px)] grid-cols-[80%_20%] grid-rows-[auto_auto] pt-[20px] transition-all sm:w-1/2 sm:min-w-[50%] sm:grid-cols-[85%_15%] md:grid-cols-[90%_10%]">
             <EditorBlock />

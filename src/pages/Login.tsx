@@ -65,8 +65,8 @@ const Login = () => {
   };
 
   return (
-    <main className="relative flex h-screen min-h-[710px] w-screen items-center  bg-dark-blue ">
-      <section className="absolute flex h-screen w-screen flex-col items-center justify-center">
+    <main className="relative flex h-screen min-h-[710px] w-full items-center  bg-dark-blue ">
+      <section className="absolute flex h-screen w-full flex-col items-center justify-center">
         {isLoading ? (
           <Spinner />
         ) : (
