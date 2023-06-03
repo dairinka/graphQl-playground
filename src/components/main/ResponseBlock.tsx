@@ -9,7 +9,7 @@ const ResponseBlock = forwardRef<HTMLElement>(function ResponseBlock(_props, ref
   return (
     <section
       ref={ref}
-      className="response h-screen w-full grow border-t-8 border-gray bg-dark-blue px-8 pt-16 text-sm text-gray transition-all sm:mt-[20px] sm:h-[calc(100vh-120px)] sm:min-h-0 sm:w-auto sm:min-w-[25%] sm:max-w-full sm:border-t-0 sm:pl-8 sm:pr-4 sm:pt-0"
+      className="response h-screen w-full grow border-t-8 border-gray bg-dark-blue px-8 pt-16 text-sm text-gray transition-all sm:mt-[20px] sm:h-[calc(100vh-120px)] sm:min-h-0 sm:w-auto sm:min-w-[25%] sm:max-w-full sm:border-t-0 sm:pl-8 sm:pr-4 sm:pt-0 xl:h-[70%]"
     >
       {isDataLoading && <Spinner />}
       {responseApi && (

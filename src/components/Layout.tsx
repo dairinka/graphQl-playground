@@ -6,11 +6,11 @@ import Header from './Header';
 
 const Layout: FC = (): JSX.Element => {
   return (
-    <>
+    <div className="outer-wrap">
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 

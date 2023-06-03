@@ -72,9 +72,9 @@ const Main: FC = (): JSX.Element => {
           false
         )}
       </div>
-      <main className="relative z-0 min-h-[calc(100vh-120px)] w-full overflow-hidden bg-dark-blue sm:h-[calc(100vh-120px)]">
+      <main className="relative z-0 min-h-[calc(100vh-120px)] w-full overflow-hidden bg-dark-blue sm:h-[calc(100vh-120px)] 2xl:h-[600px] 2xl:min-h-[600px]">
         <article className="relative flex flex-col sm:flex-row">
-          <div className="relative grid h-[calc(100vh-120px)] grid-cols-[80%_20%] grid-rows-[auto_auto] pt-[20px] transition-all sm:w-1/2 sm:min-w-[50%] sm:grid-cols-[85%_15%] md:grid-cols-[90%_10%]">
+          <div className="relative grid h-[calc(100vh-120px)] grid-cols-[80%_20%] grid-rows-[auto_auto] pt-[20px] transition-all sm:h-[calc(100vh-120px)] sm:w-1/2 sm:min-w-[50%] sm:grid-cols-[85%_15%] md:grid-cols-[90%_10%] 2xl:h-[600px]">
             <EditorBlock />
             <ControlButtons toScroll={executeScroll} />
             <div className="relative z-10 col-span-2 col-start-1 row-start-2 flex grow flex-col self-end">
