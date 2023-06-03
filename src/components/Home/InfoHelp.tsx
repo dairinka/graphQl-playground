@@ -10,7 +10,7 @@ const InfoHelp = () => {
   const [click, setClick] = useState(false);
 
   return (
-    <div className="mt-12 w-full rounded-[10px] bg-query-shadow p-6 backdrop-opacity-50">
+    <div className="mt-12 w-full rounded-[10px] bg-query-shadow p-6">
       <img
         className="hidden w-full rounded-[10px] sm:inline-block"
         src="./example.jpg"

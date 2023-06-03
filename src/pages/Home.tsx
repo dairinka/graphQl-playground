@@ -15,7 +15,8 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="flex min-h-max w-full bg-dark-blue">
+    <main className="relative flex min-h-max w-full bg-dark-blue">
+      <Background />
       <section className="relative z-10 mx-auto my-[28px] flex w-3/4 flex-col items-center">
         <div className="-mx-[20px] flex flex-col text-[20px] text-white">
           <p className="-mb-[30px] ml-6 mt-[100px] text-lg sm:text-xl">
@@ -28,7 +29,6 @@ const Home = () => {
         <InfoReact />
         <InfoTeem />
       </section>
-      <Background />
     </main>
   );
 };
