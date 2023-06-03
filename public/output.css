@@ -550,10 +550,6 @@ video {
   position: relative;
 }
 
-.sticky {
-  position: sticky;
-}
-
 .inset-x-0 {
   left: 0px;
   right: 0px;
@@ -575,8 +571,8 @@ video {
   left: 0.25rem;
 }
 
-.right-2 {
-  right: 0.5rem;
+.left-\[50\%\] {
+  left: 50%;
 }
 
 .right-3 {
@@ -605,14 +601,6 @@ video {
 
 .top-3 {
   top: 0.75rem;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.left-\[50\%\] {
-  left: 50%;
 }
 
 .z-0 {
@@ -843,6 +831,10 @@ video {
 
 .mt-\[8px\] {
   margin-top: 8px;
+}
+
+.mt-\[33px\] {
+  margin-top: 33px;
 }
 
 .inline-block {
@@ -1303,10 +1295,6 @@ video {
   border-radius: 10px;
 }
 
-.rounded-\[20px\] {
-  border-radius: 20px;
-}
-
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1410,16 +1398,8 @@ video {
   background-image: url('./Masha.jpg');
 }
 
-.bg-\[url\(\'\.\/bg_404\.png\'\)\] {
-  background-image: url('./bg_404.png');
-}
-
 .bg-\[url\(\'\.\/element_1\.png\'\)\] {
   background-image: url('./element_1.png');
-}
-
-.bg-\[url\(\'\.\/element_2\.png\'\)\] {
-  background-image: url('./element_2.png');
 }
 
 .bg-\[url\(\'\.\/ufo\.png\'\)\] {
@@ -1798,17 +1778,19 @@ video {
 }
 
 body {
-  /* display: flex;
-  align-items: flex-start; */
   background-color: #d9d9d9;
 }
 
 #root {
   position: relative;
+  scroll-behavior: smooth;
+}
+
+.outer-wrap {
   max-width: 1400px;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   margin: 0 auto;
+  box-shadow: 0px 0px 45px -14px #0e0e27;
 }
 
 .white:hover svg path {
@@ -2080,10 +2062,6 @@ a:hover svg .path1 {
     height: calc(100% - 60px);
   }
 
-  .sm\:h-\[calc\(100vh-100px\)\] {
-    height: calc(100vh - 100px);
-  }
-
   .sm\:h-\[calc\(100vh-120px\)\] {
     height: calc(100vh - 120px);
   }
@@ -2100,8 +2078,8 @@ a:hover svg .path1 {
     width: 315px;
   }
 
-  .sm\:w-\[calc\(50vw\)\] {
-    width: calc(50vw);
+  .sm\:w-\[calc\(50\%\)\] {
+    width: calc(50%);
   }
 
   .sm\:w-auto {
@@ -2140,11 +2118,6 @@ a:hover svg .path1 {
     align-items: center;
   }
 
-  .sm\:gap-x-\[8\%\] {
-    -moz-column-gap: 8%;
-         column-gap: 8%;
-  }
-
   .sm\:gap-x-\[20\%\] {
     -moz-column-gap: 20%;
          column-gap: 20%;
@@ -2156,6 +2129,14 @@ a:hover svg .path1 {
 
   .sm\:border-t-0 {
     border-top-width: 0px;
+  }
+
+  .sm\:bg-\[url\(\'\.\/bg_404\.png\'\)\] {
+    background-image: url('./bg_404.png');
+  }
+
+  .sm\:bg-\[length\:700px_450px\] {
+    background-size: 700px 450px;
   }
 
   .sm\:pl-10 {
@@ -2234,8 +2215,8 @@ a:hover svg .path1 {
 }
 
 @media (min-width: 1024px) {
-  .lg\:static {
-    position: static;
+  .lg\:relative {
+    position: relative;
   }
 
   .lg\:-mb-\[324px\] {
@@ -2260,10 +2241,6 @@ a:hover svg .path1 {
 
   .lg\:h-\[calc\(100\%-25px\)\] {
     height: calc(100% - 25px);
-  }
-
-  .lg\:h-\[calc\(100vh-100px\)\] {
-    height: calc(100vh - 100px);
   }
 
   .lg\:w-1\/2 {
@@ -2306,8 +2283,33 @@ a:hover svg .path1 {
     margin-right: auto;
   }
 
+  .xl\:mt-\[50vh\] {
+    margin-top: 50vh;
+  }
+
+  .xl\:h-\[600px\] {
+    height: 600px;
+  }
+
+  .xl\:h-\[70\%\] {
+    height: 70%;
+  }
+
+  .xl\:h-\[calc\(100\%-70px\)\] {
+    height: calc(100% - 70px);
+  }
+
+  .xl\:h-full {
+    height: 100%;
+  }
+
   .xl\:w-\[280px\] {
     width: 280px;
+  }
+
+  .xl\:-translate-y-1\/2 {
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .xl\:flex-row {
@@ -2316,5 +2318,15 @@ a:hover svg .path1 {
 
   .xl\:justify-between {
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:h-\[600px\] {
+    height: 600px;
+  }
+
+  .\32xl\:min-h-\[600px\] {
+    min-height: 600px;
   }
 }
