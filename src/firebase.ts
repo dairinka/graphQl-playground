@@ -36,13 +36,12 @@ const registerWithEmailAndPassword = async (name: string, email: string, passwor
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const { user } = res;
-    const docRef = await addDoc(collection(db, 'users'), {
+    await addDoc(collection(db, 'users'), {
       uid: user.uid,
       name,
       authProvider: 'local',
       email,
     } as unknown);
-    console.log('Document written with ID: ', docRef.id);
     await updateProfile(user, { displayName: name });
   } catch (error: unknown) {
     throw new Error(getErrorMessage(error));

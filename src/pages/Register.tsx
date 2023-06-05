@@ -12,12 +12,14 @@ import { Background } from '../components/Background';
 import { auth, registerWithEmailAndPassword } from '../firebase';
 import { Spinner } from '../components/Spinner';
 import notifyUser from '../utils/toast';
+import useAppContext from '../hooks/useAppContext';
 
 const Register: FC = (): JSX.Element => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const { setUserName } = useAppContext();
 
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
@@ -54,6 +56,7 @@ const Register: FC = (): JSX.Element => {
 
   const onSubmit: SubmitHandler<FieldValues> = async () => {
     try {
+      setUserName(name);
       setIsLoading(true);
       await registerWithEmailAndPassword(name, email, password);
       reset();

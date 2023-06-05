@@ -23,7 +23,7 @@ const Main: FC = (): JSX.Element => {
 
   const navigate = useNavigate();
   const responseRef = useRef<HTMLElement | null>(null);
-  const { setSchema, setSchemaData, schema } = useAppContext();
+  const { userName, setSchema, setSchemaData, schema } = useAppContext();
 
   useEffect(() => {
     function handleResize() {
@@ -63,13 +63,10 @@ const Main: FC = (): JSX.Element => {
   return (
     <>
       <div className="mt-[80px] h-[40px] w-full bg-green py-2 text-white">
-        {user?.displayName ? (
-          <p className="text-center">
-            <FormattedMessage id="HELLO" />, {user?.displayName}!
-          </p>
-        ) : (
-          false
-        )}
+        <p className="text-center">
+          <FormattedMessage id="HELLO" />, &nbsp;
+          {user?.displayName ? String(user.displayName) : String(userName)}!
+        </p>
       </div>
       <main className="relative z-0 min-h-[calc(100vh-120px)] w-full overflow-hidden bg-dark-blue sm:h-[calc(100vh-120px)] 2xl:h-[600px] 2xl:min-h-[600px]">
         <article className="relative flex flex-col sm:flex-row">

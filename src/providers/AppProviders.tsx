@@ -51,6 +51,8 @@ interface IAppContext {
   setParams: TypeSetState<string>;
   headersParams: string;
   setHeadersParams: TypeSetState<string>;
+  userName: string | null;
+  setUserName: TypeSetState<string | null>;
 }
 
 export const CurrentAppContext = createContext<IAppContext>({
@@ -82,6 +84,8 @@ export const CurrentAppContext = createContext<IAppContext>({
   setParams: () => {},
   headersParams: defaultParams,
   setHeadersParams: () => {},
+  userName: null,
+  setUserName: () => {},
 });
 
 export const AppProvider: FC<Props> = ({ children }) => {
@@ -98,6 +102,7 @@ export const AppProvider: FC<Props> = ({ children }) => {
   const [isDataLoading, setIsDataLoading] = useState<boolean>(false);
   const [isShowDescription, setIsShowDescription] = useState<boolean>(false);
   const [isOpenQueryParams, setIsOpenQueryParams] = useState<boolean>(false);
+  const [userName, setUserName] = useState<string | null>(null);
 
   const [currentLocale, setCurrentLocale] = useState(
     localStorage.getItem('lang') || LOCALES.ENGLISH
@@ -142,6 +147,8 @@ export const AppProvider: FC<Props> = ({ children }) => {
     setParams,
     headersParams,
     setHeadersParams,
+    userName,
+    setUserName,
   };
 
   return <CurrentAppContext.Provider value={allValue}>{children}</CurrentAppContext.Provider>;
