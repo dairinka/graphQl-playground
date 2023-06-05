@@ -8,14 +8,16 @@ import {
 } from 'firebase/auth';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
-const app = initializeApp({
-  apiKey: 'AIzaSyDEZA7LtyhlzYL4Fyvefks2G_HTB9ail5s',
-  authDomain: 'graphiql-app-3bb99.firebaseapp.com',
-  projectId: 'graphiql-app-3bb99',
-  storageBucket: 'graphiql-app-3bb99.appspot.com',
-  messagingSenderId: '1050577830539',
-  appId: '1:1050577830539:web:e8d392b38734630658ca8e',
-});
+const initialize = {
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
+};
+
+const app = initializeApp(initialize);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
@@ -34,12 +36,13 @@ const registerWithEmailAndPassword = async (name: string, email: string, passwor
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const { user } = res;
-    await addDoc(collection(db, 'users'), {
+    const docRef = await addDoc(collection(db, 'users'), {
       uid: user.uid,
       name,
       authProvider: 'local',
       email,
     } as unknown);
+    console.log('Document written with ID: ', docRef.id);
     await updateProfile(user, { displayName: name });
   } catch (error: unknown) {
     throw new Error(getErrorMessage(error));

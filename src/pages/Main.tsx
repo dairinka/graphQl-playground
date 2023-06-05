@@ -41,7 +41,6 @@ const Main: FC = (): JSX.Element => {
 
   useEffect(() => {
     if (!loading && !user) navigate('/');
-
     const getDocs = async () => {
       const { data } = (await getSchema()) as SchemaData;
       const queries = data.__schema.types.find(

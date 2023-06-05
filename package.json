@@ -20,7 +20,7 @@
     "@svgx/vite-plugin-react": "^1.0.1",
     "@types/react-transition-group": "^4.4.6",
     "concurrently": "^8.0.1",
-    "firebase": "^9.21.0",
+    "firebase": "^9.22.1",
     "prettier-plugin-tailwindcss": "^0.2.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
