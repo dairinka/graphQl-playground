@@ -10,16 +10,16 @@ const InfoHelp = () => {
   const [click, setClick] = useState(false);
 
   return (
-    <div className="mt-12 w-full rounded-[10px] bg-query-shadow p-6 backdrop-opacity-50">
+    <div className="mt-12 w-full rounded-[10px] bg-query-shadow p-6">
       <img
         className="hidden w-full rounded-[10px] sm:inline-block"
-        src="./example.jpg"
+        src="./example.png"
         alt="example"
       />
       <h2 className="font-semibold-400 mt-[35px] text-[20px]">
         <FormattedMessage id="INTRO_HELP1" />
       </h2>
-      <div className="mt-[25px] flex flex-col items-start justify-between xl:flex-row">
+      <div className="mt-[25px] flex flex-col justify-between md:flex-row md:items-start">
         <div
           className="mb-[25px] flex flex-row items-center gap-2 text-[#a9f779]"
           onClick={() => {

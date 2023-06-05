@@ -12,12 +12,14 @@ import { Background } from '../components/Background';
 import { auth, registerWithEmailAndPassword } from '../firebase';
 import { Spinner } from '../components/Spinner';
 import notifyUser from '../utils/toast';
+import useAppContext from '../hooks/useAppContext';
 
 const Register: FC = (): JSX.Element => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const { setUserName } = useAppContext();
 
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
@@ -54,6 +56,7 @@ const Register: FC = (): JSX.Element => {
 
   const onSubmit: SubmitHandler<FieldValues> = async () => {
     try {
+      setUserName(name);
       setIsLoading(true);
       await registerWithEmailAndPassword(name, email, password);
       reset();
@@ -67,18 +70,12 @@ const Register: FC = (): JSX.Element => {
   };
 
   return (
-    <main className="relative flex h-screen min-h-[710px] w-screen items-center bg-dark-blue ">
-      <section className="absolute flex h-screen w-screen flex-col items-center justify-center">
+    <main className="relative flex h-screen min-h-[710px] w-full items-center bg-dark-blue ">
+      <section className="absolute flex h-screen w-full flex-col items-center justify-center">
         {isLoading ? (
           <Spinner />
         ) : (
           <div className="flex flex-col">
-            <div className="flex flex-row place-self-center">
-              <div className="z-10 -mr-[10px] mt-[7px] h-[40px] w-[80px] items-center rounded-[10px] bg-white p-2 text-center text-green">
-                <FormattedMessage id="HELLO" />!
-              </div>
-              <div className="z-0 -mb-[50px] h-[100px] w-[100px] bg-[url('./ufo.png')] bg-cover bg-no-repeat" />
-            </div>
             <form
               className="z-10 flex w-1/2 min-w-[315px] max-w-7xl flex-col items-center justify-center rounded-[10px] bg-gray text-dark-blue min-[410px]:min-w-[400px] sm:min-w-[500px] md:min-w-[600px]"
               onSubmit={handleSubmit(onSubmit)}

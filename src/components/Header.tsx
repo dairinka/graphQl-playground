@@ -42,11 +42,11 @@ const Header: FC = (): JSX.Element => {
   return (
     <>
       <header
-        className={`fixed left-0 top-0 z-20 h-[80px] w-screen p-4 transition-all duration-200 ${
+        className={`fixed left-[50%] top-0  z-20 h-[80px] w-full max-w-[1400px] -translate-x-2/4 p-4 transition-all duration-200 ${
           animateHeader ? 'bg-green text-dark-blue' : 'bg-gray'
         }`}
       >
-        <ul className="mx-auto flex max-w-7xl list-none items-center justify-between">
+        <ul className="mx-auto flex max-w-[1400px] list-none items-center justify-between">
           <li className="white relative flex items-center gap-x-6 leading-6">
             <Link
               className="font-semibold-400 flex items-center justify-center gap-x-2.5 font-Impact text-[32px] text-dark-blue transition-all hover:text-white"

@@ -10,8 +10,8 @@ const NotFound: FC = (): JSX.Element => {
   };
 
   return (
-    <article className="flex h-screen w-screen items-center">
-      <div className="bg-content inset-x-0 mx-5 grid h-[500px] max-w-7xl grow  grid-cols-3 grid-rows-[200px_auto_140px] rounded-[20px] bg-[url('./bg_404.png')]  bg-center bg-no-repeat text-white xl:mx-auto">
+    <article className="flex h-screen w-screen items-center bg-dark-blue">
+      <div className="bg-content inset-x-0 mx-5 grid h-[500px] max-w-[1400px] grow grid-cols-3  grid-rows-[200px_auto_140px]  bg-center bg-no-repeat text-white sm:bg-[url('./bg_404.png')] sm:bg-[length:700px_450px] xl:mx-auto xl:mt-[50vh] xl:h-[600px] xl:-translate-y-1/2">
         <div className="col-span-3 col-start-1 row-start-2 self-center text-center sm:col-start-3 sm:row-start-1">
           <h1 className="font-Impact text-7xl font-bold tracking-wider">404</h1>
           <h2 className="mt-4 font-sans text-2xl font-bold">

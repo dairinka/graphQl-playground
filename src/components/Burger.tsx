@@ -25,7 +25,7 @@ const Burger: FC<IBurger> = ({ onClose }): JSX.Element => {
 
   return (
     <menu
-      className="fixed z-30 flex h-screen w-screen items-start justify-end bg-white/40"
+      className="fixed z-30 flex h-screen w-full items-start justify-end bg-white/40"
       onClick={(e) => {
         if (e.target === e.currentTarget) {
           onClose();

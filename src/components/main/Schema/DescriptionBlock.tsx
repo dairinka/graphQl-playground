@@ -25,8 +25,8 @@ const DescriptionBlock = () => {
         ref={descriptionRef}
         className="query-block absolute bottom-0 left-0 h-[200px] w-full rounded-t-lg bg-[#c6c6c6] shadow-[0_-20px_0_0_rgba(237,237,255,1)] transition-[height]"
       >
-        <h3 className="rounded-t-lg bg-green p-2 px-4">{schemaParams.name}</h3>
-        <span onClick={handleClick} className="absolute right-2 top-2 cursor-pointer p-2">
+        <h3 className="rounded-t-lg bg-green px-4 py-3">{schemaParams.name}</h3>
+        <span onClick={handleClick} className="absolute right-3 top-2 cursor-pointer px-4 py-2">
           <Close />
         </span>
         <ul className="desc scrollbar mb-2 mr-2 mt-2 h-[calc(100%-3.5rem)] overflow-scroll px-4 text-sm">

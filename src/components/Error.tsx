@@ -18,7 +18,7 @@ const ErrorMessage: FC = (): JSX.Element => {
   };
 
   return (
-    <article className="flex h-screen w-screen flex-col items-center justify-center bg-dark-blue">
+    <article className="flex h-screen w-full flex-col items-center justify-center bg-dark-blue">
       <h1 className="mt-[47px] text-4xl text-white">
         <FormattedMessage id="ERROR1" />
       </h1>

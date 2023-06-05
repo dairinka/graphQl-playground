@@ -24,22 +24,22 @@ const queries = {
 const CodeHelp = () => {
   return (
     <>
-      <div className="flex flex-col gap-4">
-        <div className="flex flex-col gap-4 lg:flex-row">
+      <div className="flex flex-col gap-4 md:w-[61%]">
+        <div className="flex flex-col gap-4 xl:flex-row">
           <p>
             <FormattedMessage id="INTRO_HELP3" />
           </p>
-          <div className="rounded-[10px] bg-query p-6 text-dark-blue ">
+          <div className="grow rounded-[10px] bg-query p-6 text-dark-blue">
             <p>{queries.code1}</p>
             <p>{queries.code2}</p>
             <pre>{queries.code3}</pre>
           </div>
         </div>
-        <div className="flex flex-col gap-4 lg:flex-row">
+        <div className="flex grow flex-col gap-4 lg:flex-row">
           <p>
             <FormattedMessage id="INTRO_HELP4" />
           </p>
-          <div className="rounded-[10px] bg-query p-6 text-dark-blue ">
+          <div className="grow rounded-[10px] bg-query p-6 text-dark-blue ">
             <pre>{queries.code4}</pre>
           </div>
         </div>

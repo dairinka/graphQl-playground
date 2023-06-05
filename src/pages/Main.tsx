@@ -23,7 +23,7 @@ const Main: FC = (): JSX.Element => {
 
   const navigate = useNavigate();
   const responseRef = useRef<HTMLElement | null>(null);
-  const { setSchema, setSchemaData, schema } = useAppContext();
+  const { userName, setSchema, setSchemaData, schema } = useAppContext();
 
   useEffect(() => {
     function handleResize() {
@@ -41,7 +41,6 @@ const Main: FC = (): JSX.Element => {
 
   useEffect(() => {
     if (!loading && !user) navigate('/');
-
     const getDocs = async () => {
       const { data } = (await getSchema()) as SchemaData;
       const queries = data.__schema.types.find(
@@ -63,18 +62,15 @@ const Main: FC = (): JSX.Element => {
 
   return (
     <>
-      <div className="mt-[80px] h-[40px] w-screen bg-green py-2 text-white">
-        {user?.displayName ? (
-          <p className="text-center">
-            <FormattedMessage id="HELLO" />, {user?.displayName}!
-          </p>
-        ) : (
-          false
-        )}
+      <div className="mt-[80px] h-[40px] w-full bg-green py-2 text-white">
+        <p className="text-center">
+          <FormattedMessage id="HELLO" />, &nbsp;
+          {user?.displayName ? String(user.displayName) : String(userName)}!
+        </p>
       </div>
-      <main className="relative z-0 min-h-[calc(100vh-120px)] w-screen overflow-hidden bg-dark-blue sm:h-[calc(100vh-120px)]">
+      <main className="relative z-0 min-h-[calc(100vh-120px)] w-full overflow-hidden bg-dark-blue sm:h-[calc(100vh-120px)] 2xl:h-[600px] 2xl:min-h-[600px]">
         <article className="relative flex flex-col sm:flex-row">
-          <div className="relative grid h-[calc(100vh-120px)] grid-cols-[80%_20%] grid-rows-[auto_auto] pt-[20px] transition-all sm:w-1/2 sm:min-w-[50%] sm:grid-cols-[85%_15%] md:grid-cols-[90%_10%]">
+          <div className="relative grid h-[calc(100vh-120px)] grid-cols-[80%_20%] grid-rows-[auto_auto] pt-[20px] transition-all sm:h-[calc(100vh-120px)] sm:w-1/2 sm:min-w-[50%] sm:grid-cols-[85%_15%] md:grid-cols-[90%_10%] 2xl:h-[600px]">
             <EditorBlock />
             <ControlButtons toScroll={executeScroll} />
             <div className="relative z-10 col-span-2 col-start-1 row-start-2 flex grow flex-col self-end">

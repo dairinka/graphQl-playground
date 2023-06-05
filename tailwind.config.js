@@ -17,7 +17,7 @@ export default {
         'red':'#dc2626',
         'orange': '#f59e0b',
         'query': '#ededff',
-        'query-shadow':'#FBFFF980',
+        'query-shadow':'#858790',
       }
     },
   },

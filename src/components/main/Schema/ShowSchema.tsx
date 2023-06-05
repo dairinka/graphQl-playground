@@ -8,9 +8,9 @@ const ShowSchema = (): JSX.Element => {
 
   return (
     <>
-      <section className="schema scrollbar ml-3 mr-3 h-[calc(100%-25px)] overflow-auto lg:h-[calc(100%-25px)]">
+      <section className="schema scrollbar ml-3 mr-3 h-[calc(100%-25px)] overflow-auto lg:h-[calc(100%-25px)] xl:h-full">
         <h3 className="mb-4 pl-2 font-semibold">Queries</h3>
-        <ul className="h-[calc(100%-25px)] list-none">
+        <ul className="h-[calc(100%-25px)] list-none xl:h-[calc(100%-70px)]">
           {schema.map((el) => (
             <li
               key={el.name}
