@@ -1026,6 +1026,10 @@ video {
   width: 250px;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
 .w-\[30px\] {
   width: 30px;
 }
@@ -1922,6 +1926,7 @@ body {
 }
 
 .page-block-header {
+  width: 300px;
   text-align: center;
 }
 
@@ -1949,6 +1954,7 @@ body {
 .page-block-btn {
   margin-top: 2.5rem;
   text-align: center;
+  width: 300px;
 }
 
 @media (min-width: 640px) {
@@ -1956,14 +1962,6 @@ body {
     align-items: flex-end;
     background-image: url('./bg_404.png');
     background-size: 500px 300px;
-  }
-
-  .page-block-header {
-    margin-right: 5rem;
-  }
-
-  .page-block-btn {
-    margin-right: 4rem;
   }
 }
 
@@ -2001,19 +1999,11 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
   }
-
-  .page-block-btn {
-    margin-right: 5.5rem;
-  }
 }
 
 @media (min-width: 1280px) {
   .page-block {
     height: 600px;
-  }
-
-  .page-block-btn {
-    margin-right: 5rem;
   }
 }
 
@@ -2105,10 +2095,6 @@ body {
 
   .sm\:mr-20 {
     margin-right: 5rem;
-  }
-
-  .sm\:mr-\[4rem\] {
-    margin-right: 4rem;
   }
 
   .sm\:mt-\[20px\] {
@@ -2354,10 +2340,6 @@ body {
     margin-top: -324px;
   }
 
-  .lg\:mr-\[5\.5rem\] {
-    margin-right: 5.5rem;
-  }
-
   .lg\:h-\[25rem\] {
     height: 25rem;
   }
@@ -2423,10 +2405,6 @@ body {
 }
 
 @media (min-width: 1280px) {
-  .xl\:mr-\[5rem\] {
-    margin-right: 5rem;
-  }
-
   .xl\:h-\[600px\] {
     height: 600px;
   }
