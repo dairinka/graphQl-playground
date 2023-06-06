@@ -8,14 +8,27 @@ import {
 } from 'firebase/auth';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
-const initialize = {
-  apiKey: import.meta.env.VITE_APIKEY,
-  authDomain: import.meta.env.VITE_AUTHDOMAIN,
-  projectId: import.meta.env.VITE_PROJECTID,
-  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
-  appId: import.meta.env.VITE_APPID,
-};
+let initialize;
+console.log(import.meta.env.MODE);
+if (import.meta.env.MODE === 'development') {
+  initialize = {
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APPID,
+  };
+} else {
+  initialize = {
+    apiKey: import.meta.env.APIKEY,
+    authDomain: import.meta.env.AUTHDOMAIN,
+    projectId: import.meta.env.PROJECTID,
+    storageBucket: import.meta.env.STORAGEBUCKET,
+    messagingSenderId: import.meta.env.MESSAGINGSENDERID,
+    appId: import.meta.env.APPID,
+  };
+}
 
 const app = initializeApp(initialize);
 const auth = getAuth(app);
