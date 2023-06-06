@@ -550,11 +550,6 @@ video {
   position: relative;
 }
 
-.inset-x-0 {
-  left: 0px;
-  right: 0px;
-}
-
 .bottom-0 {
   bottom: 0px;
 }
@@ -645,10 +640,6 @@ video {
 
 .row-start-2 {
   grid-row-start: 2;
-}
-
-.row-start-3 {
-  grid-row-start: 3;
 }
 
 .m-auto {
@@ -771,6 +762,10 @@ video {
 
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-12 {
@@ -911,6 +906,10 @@ video {
 
 .h-\[500px\] {
   height: 500px;
+}
+
+.h-\[50vh\] {
+  height: 50vh;
 }
 
 .h-\[70\%\] {
@@ -1116,20 +1115,12 @@ video {
   list-style-type: none;
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-\[80\%_20\%\] {
   grid-template-columns: 80% 20%;
 }
 
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
-}
-
-.grid-rows-\[200px_auto_140px\] {
-  grid-template-rows: 200px auto 140px;
 }
 
 .grid-rows-\[auto_auto\] {
@@ -1225,10 +1216,6 @@ video {
 
 .self-end {
   align-self: flex-end;
-}
-
-.self-center {
-  align-self: center;
 }
 
 .justify-self-end {
@@ -1376,6 +1363,10 @@ video {
 
 .bg-center {
   background-position: center;
+}
+
+.bg-left {
+  background-position: left;
 }
 
 .bg-no-repeat {
@@ -1537,8 +1528,8 @@ video {
   line-height: 2.5rem;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 
@@ -1564,6 +1555,11 @@ video {
 
 .text-\[40px\] {
   font-size: 40px;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-lg {
@@ -1747,16 +1743,7 @@ body {
   fill: white;
 }
 
-a:hover svg .path {
-  fill: white;
-}
-
-a:hover svg .path1 {
-  fill: #0e0e27;
-}
-
 .li:hover svg path {
-  fill: #860971;
   fill: #7ebc59;
 }
 
@@ -1895,6 +1882,136 @@ a:hover svg .path1 {
   content: '!';
 }
 
+.page {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0e0e27;
+}
+
+.page-bg {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  height: 50vh;
+  width: 100vw;
+  background-color: #d9d9d9;
+}
+
+.page-block {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  height: 500px;
+  width: 100vw;
+}
+
+.page-block-content {
+  margin: 0 1.25rem;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  background-position: left;
+  background-repeat: no-repeat;
+  color: #0e0e27;
+}
+
+.page-block-header {
+  text-align: center;
+}
+
+.page-block-h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.page-block-h2 {
+  margin-top: 1rem;
+  font-family: Inria Sans, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.page-block-btn {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .page-block-content {
+    align-items: flex-end;
+    background-image: url('./bg_404.png');
+    background-size: 500px 300px;
+  }
+
+  .page-block-header {
+    margin-right: 5rem;
+  }
+
+  .page-block-btn {
+    margin-right: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-block {
+    margin-top: 50vh;
+    transform: translateY(-50%);
+  }
+
+  .page-block-content {
+    background-size: 600px 400px;
+  }
+
+  .page-block-h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1000px) {
+  .page-block {
+    width: 1000px;
+  }
+
+  .page-block-content {
+    background-size: 700px 450px;
+  }
+
+  .page-block-h1 {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .page-block-h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .page-block-btn {
+    margin-right: 5.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-block {
+    height: 600px;
+  }
+
+  .page-block-btn {
+    margin-right: 5rem;
+  }
+}
+
 .hover\:border-b-2:hover {
   border-bottom-width: 2px;
 }
@@ -1921,6 +2038,11 @@ a:hover svg .path1 {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:brightness-110:hover {
+  --tw-brightness: brightness(1.1);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .hover\:brightness-150:hover {
@@ -1968,20 +2090,20 @@ a:hover svg .path1 {
     grid-column: span 1 / span 1;
   }
 
-  .sm\:col-start-3 {
-    grid-column-start: 3;
-  }
-
-  .sm\:row-start-1 {
-    grid-row-start: 1;
-  }
-
   .sm\:mr-0 {
     margin-right: 0px;
   }
 
   .sm\:mr-2 {
     margin-right: 0.5rem;
+  }
+
+  .sm\:mr-20 {
+    margin-right: 5rem;
+  }
+
+  .sm\:mr-\[4rem\] {
+    margin-right: 4rem;
   }
 
   .sm\:mt-\[20px\] {
@@ -2064,6 +2186,10 @@ a:hover svg .path1 {
     flex-direction: row;
   }
 
+  .sm\:items-end {
+    align-items: flex-end;
+  }
+
   .sm\:items-center {
     align-items: center;
   }
@@ -2085,8 +2211,8 @@ a:hover svg .path1 {
     background-image: url('./bg_404.png');
   }
 
-  .sm\:bg-\[length\:700px_450px\] {
-    background-size: 700px 450px;
+  .sm\:bg-\[length\:500px_300px\] {
+    background-size: 500px 300px;
   }
 
   .sm\:pl-10 {
@@ -2142,6 +2268,10 @@ a:hover svg .path1 {
     margin-top: 0.5rem;
   }
 
+  .md\:mt-\[50vh\] {
+    margin-top: 50vh;
+  }
+
   .md\:inline-block {
     display: inline-block;
   }
@@ -2156,6 +2286,11 @@ a:hover svg .path1 {
 
   .md\:min-w-\[600px\] {
     min-width: 600px;
+  }
+
+  .md\:-translate-y-1\/2 {
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:grid-cols-3 {
@@ -2177,6 +2312,15 @@ a:hover svg .path1 {
   .md\:gap-x-\[8\%\] {
     -moz-column-gap: 8%;
          column-gap: 8%;
+  }
+
+  .md\:bg-\[length\:600px_400px\] {
+    background-size: 600px 400px;
+  }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 }
 
@@ -2205,6 +2349,10 @@ a:hover svg .path1 {
     margin-top: -324px;
   }
 
+  .lg\:mr-\[5\.5rem\] {
+    margin-right: 5.5rem;
+  }
+
   .lg\:h-\[25rem\] {
     height: 25rem;
   }
@@ -2219,6 +2367,10 @@ a:hover svg .path1 {
 
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:w-\[1000px\] {
+    width: 1000px;
   }
 
   .lg\:w-\[280px\] {
@@ -2237,6 +2389,10 @@ a:hover svg .path1 {
     flex-direction: row;
   }
 
+  .lg\:bg-\[length\:700px_450px\] {
+    background-size: 700px 450px;
+  }
+
   .lg\:bg-auto {
     background-size: auto;
   }
@@ -2246,19 +2402,24 @@ a:hover svg .path1 {
     padding-right: 0px;
   }
 
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
   .lg\:text-\[32px\] {
     font-size: 32px;
   }
 }
 
 @media (min-width: 1280px) {
-  .xl\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .xl\:mt-\[50vh\] {
-    margin-top: 50vh;
+  .xl\:mr-\[7rem\] {
+    margin-right: 7rem;
   }
 
   .xl\:h-\[600px\] {
@@ -2281,11 +2442,6 @@ a:hover svg .path1 {
     width: 280px;
   }
 
-  .xl\:-translate-y-1\/2 {
-    --tw-translate-y: -50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
   .xl\:flex-row {
     flex-direction: row;
   }
@@ -2304,3 +2460,4 @@ a:hover svg .path1 {
     min-height: 600px;
   }
 }
+

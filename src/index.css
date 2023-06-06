@@ -182,3 +182,115 @@ body {
 .non-null::after {
   content: '!';
 }
+
+.page {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0e0e27;
+} 
+.page-bg {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  height: 50vh;
+  width: 100vw;
+  background-color: #d9d9d9;
+}
+.page-block {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  height: 500px;
+  width: 100vw;
+}
+.page-block-content {
+  margin: 0 1.25rem;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  background-position: left;
+  background-repeat: no-repeat;
+  color: #0e0e27;
+}
+.page-block-header {
+  text-align: center;
+}
+.page-block-h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.page-block-h2 {
+  margin-top: 1rem;
+  font-family: Inria Sans, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+.page-block-btn {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .page-block-content {
+    align-items: flex-end;
+    background-image: url('./bg_404.png');
+    background-size: 500px 300px;
+  }
+  .page-block-header {
+    margin-right: 5rem;
+  }
+  .page-block-btn {
+    margin-right: 4rem;
+  }
+}
+@media (min-width: 768px) {
+  .page-block {
+    margin-top: 50vh;
+    transform: translateY(-50%);
+  }
+  .page-block-content {
+    background-size: 600px 400px;
+  }
+  .page-block-h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+}
+@media (min-width: 1000px) {
+  .page-block {
+    width: 1000px;
+  }
+  .page-block-content {
+    background-size: 700px 450px;
+  }
+  .page-block-h1 {
+    font-size: 6rem;
+    line-height: 1;
+  }
+  .page-block-h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .page-block-btn {
+    margin-right: 5.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .page-block {
+    height: 600px;
+  }
+  .page-block-btn {
+    margin-right: 5rem;
+  }
+}
+
