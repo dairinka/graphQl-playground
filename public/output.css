@@ -1960,7 +1960,7 @@ body {
 @media (min-width: 640px) {
   .page-block-content {
     align-items: flex-end;
-    background-image: url('./bg_404.png');
+    background-image: url('../public/bg_404.png');
     background-size: 500px 300px;
   }
 }
@@ -2091,10 +2091,6 @@ body {
 
   .sm\:mr-2 {
     margin-right: 0.5rem;
-  }
-
-  .sm\:mr-20 {
-    margin-right: 5rem;
   }
 
   .sm\:mt-\[20px\] {

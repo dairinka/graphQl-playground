@@ -248,7 +248,7 @@ body {
 @media (min-width: 640px) {
   .page-block-content {
     align-items: flex-end;
-    background-image: url('./bg_404.png');
+    background-image: url('../public/bg_404.png');
     background-size: 500px 300px;
   }
 
