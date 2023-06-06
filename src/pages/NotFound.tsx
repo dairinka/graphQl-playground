@@ -22,7 +22,7 @@ const NotFound: FC = (): JSX.Element => {
               <FormattedMessage id="PAGE_NOT_FOUND" />
             </h2>
           </div>
-          <div className="page-block-btn mt-10 text-center sm:mr-[4rem] lg:mr-[5.5rem] xl:mr-[7rem]">
+          <div className="page-block-btn mt-10 text-center sm:mr-[4rem] lg:mr-[5.5rem] xl:mr-[5rem]">
             <button
               className="rounded-md bg-green px-16 py-3 font-sans text-base hover:brightness-110 lg:text-2xl"
               onClick={routeChange}

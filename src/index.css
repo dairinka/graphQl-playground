@@ -235,6 +235,10 @@ body {
   line-height: 1.5rem;
   font-weight: bold;
 }
+.page-block-content {
+  align-items: flex-end;
+  background-image: none;
+}
 .page-block-btn {
   margin-top: 2.5rem;
   text-align: center;

@@ -1941,6 +1941,11 @@ body {
   font-weight: bold;
 }
 
+.page-block-content {
+  align-items: flex-end;
+  background-image: none;
+}
+
 .page-block-btn {
   margin-top: 2.5rem;
   text-align: center;
@@ -2418,8 +2423,8 @@ body {
 }
 
 @media (min-width: 1280px) {
-  .xl\:mr-\[7rem\] {
-    margin-right: 7rem;
+  .xl\:mr-\[5rem\] {
+    margin-right: 5rem;
   }
 
   .xl\:h-\[600px\] {
