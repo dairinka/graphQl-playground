@@ -10,24 +10,26 @@ const NotFound: FC = (): JSX.Element => {
   };
 
   return (
-    <article className="flex h-screen w-screen items-center bg-dark-blue">
-      <div className="bg-content inset-x-0 mx-5 grid h-[500px] max-w-[1400px] grow grid-cols-3  grid-rows-[200px_auto_140px]  bg-center bg-no-repeat text-white sm:bg-[url('./bg_404.png')] sm:bg-[length:700px_450px] xl:mx-auto xl:mt-[50vh] xl:h-[600px] xl:-translate-y-1/2">
-        <div className="col-span-3 col-start-1 row-start-2 self-center text-center sm:col-start-3 sm:row-start-1">
-          <h1 className="font-Impact text-7xl font-bold tracking-wider">404</h1>
-          <h2 className="mt-4 font-sans text-2xl font-bold">
-            <FormattedMessage id="PAGE_NOT_FOUND" />
-          </h2>
-        </div>
-        <div className="col-span-3 row-start-3 grid grid-cols-3 items-center self-center">
-          <span className="hidden justify-self-center sm:inline-block">
-            <FormattedMessage id="WENT_WRONG" />
-          </span>
-          <button
-            className="col-span-3 justify-self-center rounded-md bg-green px-16 py-3 sm:col-span-1 "
-            onClick={routeChange}
-          >
-            <FormattedMessage id="HOME_PAGE" />
-          </button>
+    <article className="page absolute top-0 h-screen w-screen bg-dark-blue">
+      <div className="page-bg absolute top-0 z-0 h-[50vh] w-screen bg-gray"></div>
+      <div className="page-block relative z-10 mx-auto mt-10 h-[500px] w-screen md:mt-[50vh] md:-translate-y-1/2 lg:w-[1000px] xl:h-[600px]">
+        <div className="page-block-content bg-content mx-5 flex h-full w-full grow flex-col items-center bg-left bg-no-repeat text-dark-blue sm:items-end sm:bg-[url('./bg_404.png')] sm:bg-[length:500px_300px] md:bg-[length:600px_400px] lg:bg-[length:700px_450px]">
+          <div className="page-block-header w-[300px] text-center">
+            <h1 className="page-block-h1 font-Impact text-5xl font-bold tracking-wider md:text-7xl lg:text-8xl">
+              404
+            </h1>
+            <h2 className="page-block-h2 mt-4 font-sans text-base font-bold lg:text-2xl">
+              <FormattedMessage id="PAGE_NOT_FOUND" />
+            </h2>
+          </div>
+          <div className="page-block-btn mt-10 w-[300px] text-center">
+            <button
+              className="rounded-md bg-green px-16 py-3 font-sans text-base hover:brightness-110 lg:text-2xl"
+              onClick={routeChange}
+            >
+              <FormattedMessage id="HOME_PAGE" />
+            </button>
+          </div>
         </div>
       </div>
     </article>
